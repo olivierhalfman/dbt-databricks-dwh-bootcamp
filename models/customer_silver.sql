@@ -1,8 +1,8 @@
 select
-    C_CUSTKEY,
-    C_NAME,
-    C_NATIONKEY,
-    C_ACCTBAL
+    c_custkey,
+    c_name,
+    c_nationkey,
+    c_acctbal
 from {{ source('tpch', 'customer_bronze') }}
-where C_CUSTKEY is not null
-and C_NATIONKEY != 21
+where c_custkey is not null
+and c_nationkey != 21
